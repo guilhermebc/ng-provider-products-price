@@ -1,0 +1,3 @@
+<input type="text" [formControl]="input" (keyup.enter)="addItem()">
+<button (click)="addItem()">add</button>
+<app-list [items]="arrayNames"></app-list>
