@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-content',
@@ -7,8 +6,6 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./content.component.scss']
 })
 export class ContentComponent implements OnInit {
-
-  input = new FormControl();
 
   newValue: string;
 
@@ -19,13 +16,12 @@ export class ContentComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.input.valueChanges.subscribe(value => {
-      this.newValue = value;
-    });
   }
 
-  addItem() {
-    this.arrayNames.push(this.newValue);
+  newItem(item) {
+    if (item) {
+      this.arrayNames.push(item.productName);
+    }
   }
 
 }

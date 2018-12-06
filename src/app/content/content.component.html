@@ -1,3 +1,8 @@
-<input type="text" [formControl]="input" (keyup.enter)="addItem()">
-<button (click)="addItem()">add</button>
-<app-list [items]="arrayNames"></app-list>
+<div id="content" class="container">
+    <div class="row">
+        <div class="col-xs-12 col-md-12">
+            <app-modal (addItem)="newItem($event)"></app-modal>
+            <app-list [items]="arrayNames"></app-list>
+        </div>
+    </div>
+</div>

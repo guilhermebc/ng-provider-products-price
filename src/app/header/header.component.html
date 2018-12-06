@@ -1,4 +1,7 @@
-<header class="container">
-  <app-search-bar (inputSearch)=receiverValue($event)></app-search-bar>
-  received value: {{inputSearch}}
+<header id="header">
+  <nav class="navbar navbar-light bg-light justify-content-between">
+    <a class="navbar-brand">Navbar</a>
+    <app-search-bar (inputSearch)=receiverValue($event)></app-search-bar>
+  </nav>
 </header>
+
